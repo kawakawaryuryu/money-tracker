@@ -3,6 +3,7 @@
     <!--<img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>-->
     <Input></Input>
+    <MonthSpendResult></MonthSpendResult>
   </div>
 </template>
 
@@ -10,11 +11,13 @@
 import { Component, Vue } from 'vue-property-decorator';
 import HelloWorld from './components/HelloWorld.vue';
 import Input from './components/Input.vue';
+import MonthSpendResult from '@/components/MonthSpendResult.vue';
 
 @Component({
   components: {
     HelloWorld,
     Input,
+    MonthSpendResult,
   },
 })
 export default class App extends Vue {}
