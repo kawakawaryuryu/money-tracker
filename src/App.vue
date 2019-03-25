@@ -2,7 +2,7 @@
   <div id="app">
     <!--<img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>-->
-    <Input></Input>
+    <!--<Input></Input>-->
     <MonthSpendResult></MonthSpendResult>
   </div>
 </template>
@@ -11,7 +11,7 @@
 import { Component, Vue } from 'vue-property-decorator';
 import HelloWorld from './components/HelloWorld.vue';
 import Input from './components/Input.vue';
-import MonthSpendResult from '@/components/MonthSpendResult.vue';
+import MonthSpendResult from '@/components/month/MonthSpendResult.vue';
 
 @Component({
   components: {

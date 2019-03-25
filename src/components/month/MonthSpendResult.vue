@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h2>1月</h2>
     <div>
       <label>sum: </label>
       <span>円</span>
