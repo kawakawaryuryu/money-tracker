@@ -4,7 +4,7 @@
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>-->
     <!--<Input></Input>-->
     <MonthTab></MonthTab>
-    <MonthSpendResult></MonthSpendResult>
+    <!--<MonthSpendResult></MonthSpendResult>-->
   </div>
 </template>
 
