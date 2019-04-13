@@ -16,6 +16,7 @@
       <MonthResult></MonthResult>
     </v-tab-item>
     <v-tab-item>
+      <MonthCalendar></MonthCalendar>
     </v-tab-item>
     <v-tab-item>
       <MonthDetail></MonthDetail>
@@ -27,10 +28,12 @@
 import { Component, Vue } from 'vue-property-decorator';
 import MonthResult from '@/components/month/result/MonthResult.vue';
 import MonthDetail from '@/components/month/details/MonthDetail.vue';
+import MonthCalendar from '@/components/month/calendar/MonthCalendar.vue';
 @Component({
   components: {
     MonthDetail,
     MonthResult,
+    MonthCalendar,
   },
 })
 export default class Month extends Vue {
