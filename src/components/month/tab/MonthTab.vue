@@ -24,7 +24,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import MonthSpendResult from '@/components/month/MonthSpendResult.vue';
+import MonthSpendResult from '@/components/month/result/MonthSpendResult.vue';
 @Component({
   components: {
     MonthSpendResult,

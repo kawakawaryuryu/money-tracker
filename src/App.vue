@@ -12,7 +12,7 @@
 import { Component, Vue } from 'vue-property-decorator';
 import HelloWorld from './components/HelloWorld.vue';
 import Input from './components/Input.vue';
-import MonthSpendResult from '@/components/month/MonthSpendResult.vue';
+import MonthSpendResult from '@/components/month/result/MonthSpendResult.vue';
 import MonthTab from '@/components/month/tab/MonthTab.vue';
 
 @Component({
