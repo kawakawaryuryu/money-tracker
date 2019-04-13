@@ -13,7 +13,7 @@
       Details
     </v-tab>
     <v-tab-item>
-      <MonthSpendResult></MonthSpendResult>
+      <MonthResult></MonthResult>
     </v-tab-item>
     <v-tab-item>
     </v-tab-item>
@@ -25,15 +25,15 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import MonthSpendResult from '@/components/month/result/MonthSpendResult.vue';
+import MonthResult from '@/components/month/result/MonthResult.vue';
 import MonthDetail from '@/components/month/details/MonthDetail.vue';
 @Component({
   components: {
     MonthDetail,
-    MonthSpendResult,
+    MonthResult,
   },
 })
-export default class MonthTab extends Vue {
+export default class Month extends Vue {
 
 }
 </script>
