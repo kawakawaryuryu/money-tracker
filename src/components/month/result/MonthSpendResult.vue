@@ -32,12 +32,12 @@ import { Component, Vue } from 'vue-property-decorator';
 
 @Component
 export default class MonthSpendResult extends Vue {
- private items = [
-   {
-     sum: 100,
-     goal: 200,
-     result: 300,
-   },
+  private items = [
+    {
+      sum: 100,
+      goal: 200,
+      result: 300,
+    },
   ];
 }
 </script>
