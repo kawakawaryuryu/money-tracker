@@ -1,18 +1,20 @@
 <template>
-  <v-data-table
-      :headers="headers"
-      :items="items"
-      hide-actions
-      class=""
-  >
-    <template v-slot:items="props">
-      <tr>
-        <td class="text-md-right">{{props.item.date}}</td>
-        <td class="text-md-right">{{props.item.content}}</td>
-        <td class="text-md-right">{{props.item.expense}}円</td>
-      </tr>
-    </template>
-  </v-data-table>
+  <v-container>
+    <v-data-table
+        :headers="headers"
+        :items="items"
+        hide-actions
+        class=""
+    >
+      <template v-slot:items="props">
+        <tr>
+          <td class="text-md-right">{{props.item.date}}</td>
+          <td class="text-md-right">{{props.item.content}}</td>
+          <td class="text-md-right">{{props.item.expense}}円</td>
+        </tr>
+      </template>
+    </v-data-table>
+  </v-container>
 </template>
 
 <script lang="ts">
