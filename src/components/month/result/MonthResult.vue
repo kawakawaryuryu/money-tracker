@@ -1,8 +1,5 @@
 <template>
   <v-container fluid>
-    <v-layout justify-center>
-      <h2 class="display-3">1月</h2>
-    </v-layout>
     <v-data-table
         :items="items"
         hide-headers
