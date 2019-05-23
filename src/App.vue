@@ -3,7 +3,8 @@
     <!--<img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>-->
     <!--<Input></Input>-->
-    <Month></Month>
+<!--    <Month></Month>-->
+    <Sp></Sp>
   </div>
 </template>
 
@@ -12,9 +13,11 @@ import { Component, Vue } from 'vue-property-decorator';
 import HelloWorld from './components/HelloWorld.vue';
 import Input from './components/Input.vue';
 import Month from '@/components/month/Month.vue';
+import Sp from '@/components/Sp.vue';
 
 @Component({
   components: {
+    Sp,
     HelloWorld,
     Input,
     Month,
