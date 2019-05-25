@@ -17,7 +17,8 @@ export default new Router({
     {
       path: '/input',
       name: 'input',
-      component: Input,
+      component: () =>
+        import('@/components/Input.vue'),
     },
     {
       path: '/calendar',
