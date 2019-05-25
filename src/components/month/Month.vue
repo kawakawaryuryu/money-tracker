@@ -44,7 +44,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import MonthResult from '@/components/month/result/MonthResult.vue';
-import MonthDetail from '@/components/month/details/MonthDetail.vue';
+import MonthDetail from '@/components/month/detail/MonthDetail.vue';
 import MonthCalendar from '@/components/month/calendar/MonthCalendar.vue';
 
 @Component({
