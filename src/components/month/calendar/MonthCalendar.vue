@@ -23,6 +23,8 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+
+@Component
 export default class MonthCalendar extends Vue {
   private headers = [
     {
