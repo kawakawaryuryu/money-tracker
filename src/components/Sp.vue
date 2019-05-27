@@ -29,7 +29,7 @@
           color="teal"
           flat
           value="input"
-          to="/input"
+          @click.stop="openDialog()"
       >
         <span>Input</span>
         <v-icon>input</v-icon>
@@ -58,10 +58,15 @@
 
 <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator';
+  import { OPEN_INPUT_DIALOG } from '@/mutation-types';
 
   @Component
   export default class Sp extends Vue {
-    private bottomNav = '';
+    private bottomNav: string = '';
+
+    public openDialog() {
+      this.$store.commit(OPEN_INPUT_DIALOG);
+    }
   }
 </script>
 
