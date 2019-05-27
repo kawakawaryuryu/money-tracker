@@ -5,6 +5,7 @@
         :active.sync="bottomNav"
         :value="true"
         absolute
+        fixed
         color="transparent"
     >
       <v-btn
@@ -28,6 +29,7 @@
       <v-btn
           color="teal"
           flat
+          active-class
           value="input"
           @click.stop="openDialog()"
       >
