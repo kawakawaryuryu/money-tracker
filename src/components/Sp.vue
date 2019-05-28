@@ -5,6 +5,7 @@
         :active.sync="bottomNav"
         :value="true"
         absolute
+        fixed
         color="transparent"
     >
       <v-btn
@@ -28,8 +29,9 @@
       <v-btn
           color="teal"
           flat
+          active-class
           value="input"
-          to="/input"
+          @click.stop="openDialog()"
       >
         <span>Input</span>
         <v-icon>input</v-icon>
@@ -58,10 +60,15 @@
 
 <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator';
+  import { OPEN_INPUT_DIALOG } from '@/mutation-types';
 
   @Component
   export default class Sp extends Vue {
-    private bottomNav = '';
+    private bottomNav: string = '';
+
+    public openDialog() {
+      this.$store.commit(OPEN_INPUT_DIALOG);
+    }
   }
 </script>
 

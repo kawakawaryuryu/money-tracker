@@ -2,8 +2,8 @@
   <div id="app">
     <!--<img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>-->
-    <!--<Input></Input>-->
 <!--    <Month></Month>-->
+    <Input></Input>
     <Sp></Sp>
   </div>
 </template>
