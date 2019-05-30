@@ -2,9 +2,7 @@
   <div>
     <router-view></router-view>
     <v-bottom-nav
-        :active.sync="bottomNav"
         :value="true"
-        absolute
         fixed
         color="transparent"
     >
@@ -64,7 +62,6 @@
 
   @Component
   export default class Sp extends Vue {
-    private bottomNav: string = '';
 
     public openDialog() {
       this.$store.commit(OPEN_INPUT_DIALOG);

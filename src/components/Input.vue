@@ -39,7 +39,10 @@
                     v-on="on"
                 ></v-text-field>
               </template>
-              <v-date-picker v-model="date" @input="menu = false"></v-date-picker>
+              <v-date-picker
+                  v-model="date"
+                  @input="menu = false"
+              ></v-date-picker>
             </v-menu>
           </v-flex>
         </v-layout>
