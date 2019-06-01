@@ -1,6 +1,9 @@
 <template>
   <v-dialog
       v-model="dialog"
+      fullscreen
+      transition="dialog-bottom-transition"
+      hide-overlay
   >
     <v-card>
       <v-container>
@@ -23,12 +26,9 @@
             <v-menu
                 v-model="menu"
                 :close-on-content-click="false"
-                :nudge-right="40"
                 lazy
                 transition="scale-transition"
-                offset-y
                 full-width
-                min-width="290px"
             >
               <template v-slot:activator="{ on }">
                 <v-text-field
