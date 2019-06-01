@@ -1,13 +1,13 @@
 <template>
-  <div id="app">
+  <v-app class="white">
     <Input></Input>
     <Sp></Sp>
-  </div>
+  </v-app>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import Input from './components/input/Input.vue';
+import Input from '@/components/input/Input.vue';
 import Sp from '@/components/Sp.vue';
 
 @Component({
@@ -20,12 +20,4 @@ export default class App extends Vue {}
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>

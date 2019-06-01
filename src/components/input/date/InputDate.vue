@@ -20,7 +20,6 @@
         </template>
         <v-date-picker
             no-title
-            color="black"
             v-model="date"
             @input="menu = false"
         ></v-date-picker>
