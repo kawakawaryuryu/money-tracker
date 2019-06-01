@@ -11,19 +11,19 @@ export default new Router({
       path: '/result',
       name: 'result',
       component: () =>
-        import('@/components/month/result/MonthResult.vue'),
+        import('@/components/result/MonthResult.vue'),
     },
     {
       path: '/calendar',
       name: 'calendar',
       component: () =>
-        import('@/components/month/calendar/MonthCalendar.vue'),
+        import('@/components/calendar/MonthCalendar.vue'),
     },
     {
       path: '/detail',
       name: 'detail',
       component: () =>
-        import('@/components/month/detail/MonthDetail.vue'),
+        import('@/components/detail/MonthDetail.vue'),
     },
   ],
 });
