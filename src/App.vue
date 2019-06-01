@@ -1,8 +1,5 @@
 <template>
   <div id="app">
-    <!--<img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>-->
-<!--    <Month></Month>-->
     <Input></Input>
     <Sp></Sp>
   </div>
@@ -11,8 +8,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import HelloWorld from './components/HelloWorld.vue';
-import Input from './components/Input.vue';
-import Month from '@/components/month/Month.vue';
+import Input from './components/input/Input.vue';
 import Sp from '@/components/Sp.vue';
 
 @Component({
@@ -20,7 +16,6 @@ import Sp from '@/components/Sp.vue';
     Sp,
     HelloWorld,
     Input,
-    Month,
   },
 })
 export default class App extends Vue {}
