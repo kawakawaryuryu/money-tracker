@@ -7,6 +7,7 @@
           lazy
           transition="scale-transition"
           full-width
+          min-width="290"
       >
         <template v-slot:activator="{ on }">
           <v-text-field
@@ -18,6 +19,8 @@
           ></v-text-field>
         </template>
         <v-date-picker
+            no-title
+            color="black"
             v-model="date"
             @input="menu = false"
         ></v-date-picker>
@@ -28,10 +31,11 @@
 
 <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator';
+  import moment from 'moment';
 
   @Component
   export default class InputDate extends Vue {
-    private date = new Date().toISOString().substr(0, 10);
+    private date: string = moment().format('YYYY-MM-DD');
     private menu: boolean = false;
 
   }
