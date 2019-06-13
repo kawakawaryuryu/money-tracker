@@ -9,15 +9,27 @@
       <template v-slot:items="props">
         <tr>
           <th>sum</th>
-          <td class="text-md-right">{{props.item.sum}}円</td>
+          <td class="text-md-right">
+            <v-layout justify-center>
+              {{props.item.sum}}円
+            </v-layout>
+          </td>
         </tr>
         <tr>
           <th>goal</th>
-          <td class="text-md-right">{{props.item.goal}}円</td>
+          <td class="text-md-right">
+            <v-layout justify-center>
+              {{props.item.goal}}円
+            </v-layout>
+          </td>
         </tr>
         <tr>
           <th>result</th>
-          <td class="text-md-right">{{props.item.result}}円</td>
+          <td class="text-md-right">
+            <v-layout justify-center>
+              {{props.item.result}}円
+            </v-layout>
+          </td>
         </tr>
       </template>
     </v-data-table>
@@ -25,18 +37,18 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+  import { Component, Vue } from 'vue-property-decorator';
 
-@Component
-export default class MonthResult extends Vue {
-  private items = [
-    {
-      sum: 100,
-      goal: 200,
-      result: 300,
-    },
-  ];
-}
+  @Component
+  export default class MonthResult extends Vue {
+    private items = [
+      {
+        sum: 100,
+        goal: 200,
+        result: 300,
+      },
+    ];
+  }
 </script>
 
 <style scoped>
