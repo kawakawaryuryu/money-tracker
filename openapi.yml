@@ -6,7 +6,7 @@ servers:
 info:
   description: This is a money tracker api
   version: "1.0.0"
-  title: Money Tracker AP
+  title: Money Tracker API
   contact:
     email: kawakawaryuryu@hotmail.co.jp 
   license:
