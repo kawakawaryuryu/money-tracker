@@ -23,36 +23,36 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue } from 'vue-property-decorator';
 
 @Component
 export default class MonthDetail extends Vue {
   private headers = [
     {
-      text: "date",
-      align: "center",
-      value: "date"
+      text: 'date',
+      align: 'center',
+      value: 'date'
     },
     {
-      text: "content",
-      align: "center",
-      value: "content"
+      text: 'content',
+      align: 'center',
+      value: 'content'
     },
     {
-      text: "expense",
-      align: "center",
-      value: "expense"
+      text: 'expense',
+      align: 'center',
+      value: 'expense'
     }
   ];
   private items = [
     {
-      date: "2019/04/10",
-      content: "ティッシュ",
+      date: '2019/04/10',
+      content: 'ティッシュ',
       expense: 100
     },
     {
-      date: "2019/04/11",
-      content: "チーズ",
+      date: '2019/04/11',
+      content: 'チーズ',
       expense: 150
     }
   ];

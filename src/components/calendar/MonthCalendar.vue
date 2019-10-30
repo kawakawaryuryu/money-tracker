@@ -21,29 +21,29 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue } from 'vue-property-decorator';
 
 @Component
 export default class MonthCalendar extends Vue {
   private headers = [
     {
-      text: "content",
-      align: "center",
-      value: "content"
+      text: 'content',
+      align: 'center',
+      value: 'content'
     },
     {
-      text: "expense",
-      align: "center",
-      value: "expense"
+      text: 'expense',
+      align: 'center',
+      value: 'expense'
     }
   ];
   private items = [
     {
-      content: "ティッシュ",
+      content: 'ティッシュ',
       expense: 100
     },
     {
-      content: "チーズ",
+      content: 'チーズ',
       expense: 150
     }
   ];

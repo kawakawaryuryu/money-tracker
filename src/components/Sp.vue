@@ -33,8 +33,8 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import { OPEN_INPUT_DIALOG } from "@/mutation-types";
+import { Component, Vue } from 'vue-property-decorator';
+import { OPEN_INPUT_DIALOG } from '@/mutation-types';
 
 @Component
 export default class Sp extends Vue {

@@ -29,11 +29,11 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import { CLOSE_INPUT_DIALOG } from "@/mutation-types";
-import InputAmount from "@/components/input/amount/InputAmount.vue";
-import InputDate from "@/components/input/date/InputDate.vue";
-import InputContent from "@/components/input/content/InputContent.vue";
+import { Component, Vue } from 'vue-property-decorator';
+import { CLOSE_INPUT_DIALOG } from '@/mutation-types';
+import InputAmount from '@/components/input/amount/InputAmount.vue';
+import InputDate from '@/components/input/date/InputDate.vue';
+import InputContent from '@/components/input/content/InputContent.vue';
 
 @Component({
   components: {
