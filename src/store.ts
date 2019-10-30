@@ -1,6 +1,6 @@
-import Vue from "vue";
-import Vuex from "vuex";
-import { CLOSE_INPUT_DIALOG, OPEN_INPUT_DIALOG } from "@/mutation-types";
+import Vue from 'vue';
+import Vuex from 'vuex';
+import { CLOSE_INPUT_DIALOG, OPEN_INPUT_DIALOG } from '@/mutation-types';
 
 Vue.use(Vuex);
 

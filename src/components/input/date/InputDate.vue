@@ -29,12 +29,12 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import moment from "moment";
+import { Component, Vue } from 'vue-property-decorator';
+import moment from 'moment';
 
 @Component
 export default class InputDate extends Vue {
-  private date: string = moment().format("YYYY-MM-DD");
+  private date: string = moment().format('YYYY-MM-DD');
   private menu: boolean = false;
 }
 </script>
