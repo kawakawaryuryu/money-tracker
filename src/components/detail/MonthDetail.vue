@@ -14,7 +14,9 @@
             </v-layout>
           </td>
           <td class="text-md-right">
-            <v-layout justify-center> {{ props.item.expense }}円 </v-layout>
+            <v-layout justify-center>
+              {{ props.item.expense }}円
+            </v-layout>
           </td>
         </tr>
       </template>
@@ -24,10 +26,12 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import { TableHeader } from '@/types/vuetify/table';
+import { ExpenseItem } from '@/components/detail/expense-item';
 
 @Component
 export default class MonthDetail extends Vue {
-  private headers = [
+  private headers: TableHeader[] = [
     {
       text: 'date',
       align: 'center',
@@ -44,7 +48,7 @@ export default class MonthDetail extends Vue {
       value: 'expense'
     }
   ];
-  private items = [
+  private items: ExpenseItem[] = [
     {
       date: '2019/04/10',
       content: 'ティッシュ',
