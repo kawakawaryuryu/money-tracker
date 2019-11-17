@@ -27,6 +27,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import { TableHeader } from '@/types/vuetify/table';
+import { getExpenses } from '@/httpclient/expense/expense-client';
 import { ExpenseItem } from '@/components/detail/expense-item';
 
 @Component
@@ -48,18 +49,16 @@ export default class MonthDetail extends Vue {
       value: 'expense'
     }
   ];
-  private items: ExpenseItem[] = [
-    {
-      date: '2019/04/10',
-      content: 'ティッシュ',
-      expense: 100
-    },
-    {
-      date: '2019/04/11',
-      content: 'チーズ',
-      expense: 150
-    }
-  ];
+  private items: ExpenseItem[] = [];
+
+  private async created() {
+    const res = await getExpenses();
+    this.items = res.expenses.map((exp) => new ExpenseItem(
+      exp.date,
+      exp.content,
+      exp.amount
+    ));
+  }
 }
 </script>
 
