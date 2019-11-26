@@ -17,10 +17,10 @@
         <InputContent></InputContent>
         <v-layout row>
           <v-layout justify-center>
-            <v-btn flat @click="cancel()">Cancel</v-btn>
+            <v-btn text @click="cancel()">Cancel</v-btn>
           </v-layout>
           <v-layout justify-center>
-            <v-btn flat @click="save()">Save</v-btn>
+            <v-btn text @click="save()">Save</v-btn>
           </v-layout>
         </v-layout>
       </v-container>
