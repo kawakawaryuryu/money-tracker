@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <v-data-table :items="items" hide-headers hide-actions class="">
+    <v-data-table :items="items" hide-headers hide-default-footer class="">
       <template v-slot:items="props">
         <tr>
           <th>sum</th>

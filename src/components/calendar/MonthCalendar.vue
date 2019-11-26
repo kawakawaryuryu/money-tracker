@@ -3,7 +3,7 @@
     <v-sheet height="250">
       <v-calendar :show-month-on-first="false"></v-calendar>
     </v-sheet>
-    <v-data-table :headers="headers" :items="items" hide-actions>
+    <v-data-table :headers="headers" :items="items" hide-default-footer>
       <template v-slot:items="props">
         <tr>
           <td class="text-md-right">
