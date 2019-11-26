@@ -1,7 +1,7 @@
 <template>
   <div>
     <router-view></router-view>
-    <v-bottom-nav :value="true" fixed color="transparent">
+    <v-bottom-navigation :value="true" fixed color="transparent">
       <v-btn color="teal" text value="top" to="/top">
         <span>Top</span>
         <v-icon>home</v-icon>
@@ -28,7 +28,7 @@
         <span>Detail</span>
         <v-icon>details</v-icon>
       </v-btn>
-    </v-bottom-nav>
+    </v-bottom-navigation>
   </div>
 </template>
 
