@@ -8,8 +8,10 @@ import './registerServiceWorker';
 
 Vue.config.productionTip = false;
 Vue.use(Vuetify);
+const vuetify = new Vuetify();
 
 new Vue({
+  vuetify,
   router,
   store,
   render: h => h(App)
