@@ -2,17 +2,17 @@
   <div>
     <router-view></router-view>
     <v-bottom-nav :value="true" fixed color="transparent">
-      <v-btn color="teal" flat value="top" to="/top">
+      <v-btn color="teal" text value="top" to="/top">
         <span>Top</span>
         <v-icon>home</v-icon>
       </v-btn>
-      <v-btn color="teal" flat value="result" to="/result">
+      <v-btn color="teal" text value="result" to="/result">
         <span>Result</span>
         <v-icon>report</v-icon>
       </v-btn>
       <v-btn
         color="teal"
-        flat
+        text
         active-class
         value="input"
         @click.stop="openDialog()"
@@ -20,11 +20,11 @@
         <span>Input</span>
         <v-icon>input</v-icon>
       </v-btn>
-      <v-btn color="teal" flat value="calendar" to="/calendar">
+      <v-btn color="teal" text value="calendar" to="/calendar">
         <span>Calendar</span>
         <v-icon>calendar_today</v-icon>
       </v-btn>
-      <v-btn color="teal" flat value="detail" to="/detail">
+      <v-btn color="teal" text value="detail" to="/detail">
         <span>Detail</span>
         <v-icon>details</v-icon>
       </v-btn>
