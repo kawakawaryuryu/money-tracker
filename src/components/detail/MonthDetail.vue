@@ -4,7 +4,7 @@
         :headers="headers"
         :items="items"
         hide-default-footer
-        mobile-breakpoint="0"> <!-- tableのヘッダー表示をスマホでも崩さないようにしている -->
+        :mobile-breakpoint="0"> <!-- tableのヘッダー表示をスマホでも崩さないようにしている -->
     </v-data-table>
   </v-container>
 </template>
@@ -46,7 +46,6 @@ export default class MonthDetail extends Vue {
         expense: amount
       };
     });
-    console.log(this.items)
   }
 }
 </script>
