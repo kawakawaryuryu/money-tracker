@@ -3,19 +3,11 @@
     <v-sheet height="250">
       <v-calendar :show-month-on-first="false"></v-calendar>
     </v-sheet>
-    <v-data-table :headers="headers" :items="items" hide-actions>
-      <template v-slot:items="props">
-        <tr>
-          <td class="text-md-right">
-            <v-layout justify-center>
-              {{ props.item.content }}
-            </v-layout>
-          </td>
-          <td class="text-md-right">
-            <v-layout justify-center> {{ props.item.expense }}円 </v-layout>
-          </td>
-        </tr>
-      </template>
+    <v-data-table
+        :headers="headers"
+        :items="items"
+        hide-default-footer
+        :mobile-breakpoint="0">
     </v-data-table>
   </v-container>
 </template>

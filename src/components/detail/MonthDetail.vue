@@ -1,33 +1,23 @@
 <template>
   <v-container>
-    <v-data-table :headers="headers" :items="items" hide-actions>
-      <template v-slot:items="props">
-        <tr>
-          <td class="text-md-right">
-            <v-layout justify-center>
-              {{ props.item.date }}
-            </v-layout>
-          </td>
-          <td class="text-md-right">
-            <v-layout justify-center>
-              {{ props.item.content }}
-            </v-layout>
-          </td>
-          <td class="text-md-right">
-            <v-layout justify-center> {{ props.item.expense }}円 </v-layout>
-          </td>
-        </tr>
-      </template>
+    <v-data-table
+        :headers="headers"
+        :items="items"
+        hide-default-footer
+        :mobile-breakpoint="0"> <!-- tableのヘッダー表示をスマホでも崩さないようにしている -->
     </v-data-table>
   </v-container>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import { TableHeader } from '@/types/vuetify/table';
+import { getExpenses } from '@/httpclient/expense/expense-client';
+import { ExpenseItem } from '@/components/detail/expense-item';
 
 @Component
 export default class MonthDetail extends Vue {
-  private headers = [
+  private headers: TableHeader[] = [
     {
       text: 'date',
       align: 'center',
@@ -44,18 +34,19 @@ export default class MonthDetail extends Vue {
       value: 'expense'
     }
   ];
-  private items = [
-    {
-      date: '2019/04/10',
-      content: 'ティッシュ',
-      expense: 100
-    },
-    {
-      date: '2019/04/11',
-      content: 'チーズ',
-      expense: 150
-    }
-  ];
+  private items: ExpenseItem[] = [];
+
+  private async created() {
+    const res = await getExpenses();
+    this.items = res.expenses.map(exp => {
+      const { date, content, amount } = exp;
+      return {
+        date,
+        content,
+        expense: amount
+      };
+    });
+  }
 }
 </script>
 
