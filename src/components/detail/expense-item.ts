@@ -1,7 +1,5 @@
-export class ExpenseItem {
-  constructor(
-    date: string,
-    content: string,
-    expense: number,
-  ) {}
+export interface ExpenseItem {
+  date: string;
+  content: string;
+  expense: number;
 }

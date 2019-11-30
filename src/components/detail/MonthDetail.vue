@@ -1,25 +1,10 @@
 <template>
   <v-container>
-    <v-data-table :headers="headers" :items="items" hide-actions>
-      <template v-slot:items="props">
-        <tr>
-          <td class="text-md-right">
-            <v-layout justify-center>
-              {{ props.item.date }}
-            </v-layout>
-          </td>
-          <td class="text-md-right">
-            <v-layout justify-center>
-              {{ props.item.content }}
-            </v-layout>
-          </td>
-          <td class="text-md-right">
-            <v-layout justify-center>
-              {{ props.item.expense }}円
-            </v-layout>
-          </td>
-        </tr>
-      </template>
+    <v-data-table
+        :headers="headers"
+        :items="items"
+        hide-default-footer
+        mobile-breakpoint="0"> <!-- tableのヘッダー表示をスマホでも崩さないようにしている -->
     </v-data-table>
   </v-container>
 </template>
@@ -53,11 +38,15 @@ export default class MonthDetail extends Vue {
 
   private async created() {
     const res = await getExpenses();
-    this.items = res.expenses.map((exp) => new ExpenseItem(
-      exp.date,
-      exp.content,
-      exp.amount
-    ));
+    this.items = res.expenses.map(exp => {
+      const { date, content, amount } = exp;
+      return {
+        date,
+        content,
+        expense: amount
+      };
+    });
+    console.log(this.items)
   }
 }
 </script>
