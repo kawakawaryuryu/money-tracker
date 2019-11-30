@@ -4,9 +4,7 @@
       <v-menu
         v-model="menu"
         :close-on-content-click="false"
-        lazy
         transition="scale-transition"
-        full-width
         min-width="290"
       >
         <template v-slot:activator="{ on }">
