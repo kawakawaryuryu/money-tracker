@@ -7,22 +7,22 @@
   >
     <v-card>
       <v-container>
-        <v-layout justify-center>
+        <v-row justify="center">
           <v-card-title>
             <span class="headline">Input expense</span>
           </v-card-title>
-        </v-layout>
+        </v-row>
         <InputAmount></InputAmount>
         <InputDate></InputDate>
         <InputContent></InputContent>
-        <v-layout row>
-          <v-layout justify-center>
+        <v-row row>
+          <v-row justify="center">
             <v-btn text @click="cancel()">Cancel</v-btn>
-          </v-layout>
-          <v-layout justify-center>
+          </v-row>
+          <v-row justify="center">
             <v-btn text @click="save()">Save</v-btn>
-          </v-layout>
-        </v-layout>
+          </v-row>
+        </v-row>
       </v-container>
     </v-card>
   </v-dialog>

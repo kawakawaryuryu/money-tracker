@@ -1,9 +1,9 @@
 <template>
-  <v-layout justify-center>
-    <v-flex xs12 sm8 md6>
+  <v-row justify="center">
+    <v-col :xs="12" :sm="8" :md="6">
       <v-text-field label="Amount" type="number" prefix="¥"></v-text-field>
-    </v-flex>
-  </v-layout>
+    </v-col>
+  </v-row>
 </template>
 
 <script lang="ts">

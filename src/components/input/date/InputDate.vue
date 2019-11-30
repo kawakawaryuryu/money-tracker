@@ -1,6 +1,6 @@
 <template>
-  <v-layout justify-center>
-    <v-flex xs12 sm8 md6>
+  <v-row justify="center">
+    <v-col :xs="12" :sm="8" :md="6">
       <v-menu
         v-model="menu"
         :close-on-content-click="false"
@@ -22,8 +22,8 @@
           @input="menu = false"
         ></v-date-picker>
       </v-menu>
-    </v-flex>
-  </v-layout>
+    </v-col>
+  </v-row>
 </template>
 
 <script lang="ts">
