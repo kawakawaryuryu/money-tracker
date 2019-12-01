@@ -15,10 +15,11 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import { TableHeader } from 'vuetify/src/components/VDataTable/mixins/header';
 
 @Component
 export default class MonthCalendar extends Vue {
-  private headers = [
+  private headers: TableHeader[] = [
     {
       text: 'content',
       align: 'center',
