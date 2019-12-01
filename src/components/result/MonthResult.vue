@@ -1,11 +1,12 @@
 <template>
   <v-container fluid>
     <v-data-table
-        :headers="headers"
-        :items="items"
-        hide-default-header
-        hide-default-footer
-        :mobile-breakpoint="0">
+      :headers="headers"
+      :items="items"
+      hide-default-header
+      hide-default-footer
+      :mobile-breakpoint="0"
+    >
     </v-data-table>
   </v-container>
 </template>

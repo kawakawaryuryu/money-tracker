@@ -1,7 +1,7 @@
 export interface TableHeader {
   text: string;
   value: string;
-  align?: 'start' | 'center' | 'end'
+  align?: 'start' | 'center' | 'end';
   sortable?: boolean;
   filterable?: boolean;
   divider?: boolean;

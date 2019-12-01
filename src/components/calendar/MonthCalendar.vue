@@ -4,10 +4,11 @@
       <v-calendar :show-month-on-first="false"></v-calendar>
     </v-sheet>
     <v-data-table
-        :headers="headers"
-        :items="items"
-        hide-default-footer
-        :mobile-breakpoint="0">
+      :headers="headers"
+      :items="items"
+      hide-default-footer
+      :mobile-breakpoint="0"
+    >
     </v-data-table>
   </v-container>
 </template>

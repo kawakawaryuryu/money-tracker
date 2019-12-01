@@ -1,10 +1,12 @@
 <template>
   <v-container>
     <v-data-table
-        :headers="headers"
-        :items="items"
-        hide-default-footer
-        :mobile-breakpoint="0"> <!-- tableのヘッダー表示をスマホでも崩さないようにしている -->
+      :headers="headers"
+      :items="items"
+      hide-default-footer
+      :mobile-breakpoint="0"
+    >
+      <!-- tableのヘッダー表示をスマホでも崩さないようにしている -->
     </v-data-table>
   </v-container>
 </template>
