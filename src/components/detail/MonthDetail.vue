@@ -13,7 +13,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import { TableHeader } from 'vuetify/src/components/VDataTable/mixins/header';
+import { TableHeader } from '@/types/vuetify/table';
 import { getExpenses } from '@/httpclient/expense/expense-client';
 import { ExpenseItem } from '@/components/detail/expense-item';
 

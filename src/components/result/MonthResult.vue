@@ -13,7 +13,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import { TableHeader } from 'vuetify/src/components/VDataTable/mixins/header';
+import { TableHeader } from '@/types/vuetify/table';
 
 @Component
 export default class MonthResult extends Vue {
