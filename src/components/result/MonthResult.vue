@@ -14,7 +14,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import { TableHeader } from '@/types/vuetify/table';
-import { getResult } from '@/httpclient/result/result-client';
+import { getResults } from '@/httpclient/result/result-client';
 import { ResultSummary } from '@/components/result/result-summary';
 import moment from 'moment';
 
@@ -36,7 +36,7 @@ export default class MonthResult extends Vue {
 
   private async created() {
     const thisMonth = moment().format('YYYY-MM');
-    const res = await getResult(thisMonth);
+    const res = await getResults(thisMonth);
     const { totalExpense, expenseGoal, balance } = res.results[0];
     this.items = [
       {
