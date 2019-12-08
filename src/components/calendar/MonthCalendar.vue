@@ -58,10 +58,6 @@ export default class MonthCalendar extends Vue {
       };
     });
   }
-
-  private convertDateFormat(date: string): string {
-    return '';
-  }
 }
 </script>
 
