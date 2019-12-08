@@ -13,35 +13,46 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import { TableHeader } from '@/types/vuetify/table';
+import { getResults } from '@/httpclient/result/result-client';
+import { ResultSummary } from '@/components/result/result-summary';
+import moment from 'moment';
 
 @Component
 export default class MonthResult extends Vue {
-  private headers = [
+  private headers: TableHeader[] = [
     {
-      text: 'resultName',
+      text: 'name',
       align: 'center',
-      value: 'resultName'
+      value: 'name'
     },
     {
-      text: 'result',
+      text: 'value',
       align: 'center',
-      value: 'result'
+      value: 'value'
     }
   ];
-  private items = [
-    {
-      resultName: 'sum',
-      result: 100
-    },
-    {
-      resultName: 'goal',
-      result: 200
-    },
-    {
-      resultName: 'result',
-      result: 300
-    }
-  ];
+  private items: ResultSummary[] = [];
+
+  private async created() {
+    const thisMonth = moment().format('YYYY-MM');
+    const res = await getResults(thisMonth);
+    const { totalExpense, expenseGoal, balance } = res.results[0];
+    this.items = [
+      {
+        name: 'sum',
+        value: totalExpense
+      },
+      {
+        name: 'goal',
+        value: expenseGoal
+      },
+      {
+        name: 'result',
+        value: balance
+      }
+    ];
+  }
 }
 </script>
 

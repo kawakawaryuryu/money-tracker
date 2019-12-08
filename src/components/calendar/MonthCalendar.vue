@@ -15,10 +15,19 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import moment from 'moment';
+import { TableHeader } from '@/types/vuetify/table';
+import { ExpenseItem } from '@/components/detail/expense-item';
+import { getExpenses } from '@/httpclient/expense/expense-client';
 
 @Component
 export default class MonthCalendar extends Vue {
-  private headers = [
+  private headers: TableHeader[] = [
+    {
+      text: 'date',
+      align: 'center',
+      value: 'date'
+    },
     {
       text: 'content',
       align: 'center',
@@ -30,16 +39,25 @@ export default class MonthCalendar extends Vue {
       value: 'expense'
     }
   ];
-  private items = [
-    {
-      content: 'ティッシュ',
-      expense: 100
-    },
-    {
-      content: 'チーズ',
-      expense: 150
-    }
-  ];
+  private items: ExpenseItem[] = [];
+
+  private async created() {
+    const firstDay = moment()
+      .startOf('month')
+      .format('YYYY-MM-DD');
+    const lastDay = moment()
+      .endOf('month')
+      .format('YYYY-MM-DD');
+    const res = await getExpenses(firstDay, lastDay);
+    this.items = res.expenses.map(exp => {
+      const { date, content, amount } = exp;
+      return {
+        date,
+        content,
+        expense: amount
+      };
+    });
+  }
 }
 </script>
 
