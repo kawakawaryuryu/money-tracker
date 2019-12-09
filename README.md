@@ -1,33 +1,46 @@
 # money-tracker
-## Project setup
+[![CircleCI](https://circleci.com/gh/kawakawaryuryu/dockerfile-wizard.svg?style=svg)](https://circleci.com/gh/kawakawaryuryu/dockerfile-wizard)
+## setup
 ```
 yarn install
 ```
 
 ### Compiles and hot-reloads for development
 ```
-yarn run serve
+yarn serve
 ```
 
 ### Compiles and minifies for production
 ```
-yarn run build
+yarn build
 ```
 
 ### Run your tests
 ```
-yarn run test
+yarn test
 ```
 
 ### Lints and fixes files
-```
-yarn run lint
-```
+```bash
+# only lint
+yarn lint
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# lint adn fix files
+yarn lintfix
+```
 
 ## How to create OpenAPI stub server
+### with OpenAPI Generator
 ```
 openapi-generator generate -i openapi.yml -g spring -o swagger
 ```
+
+### with Prism
+```bash
+# install
+yarn global add @stoplight/prism-cli
+
+# run mock server with port 3000
+prism mock -p 3000 openapi.yml
+```
+- [Prism | stoplightio/prism | Stoplight](https://stoplight.io/p/docs/gh/stoplightio/prism/README.md)
