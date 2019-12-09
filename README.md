@@ -1,5 +1,5 @@
 # money-tracker
-[![CircleCI](https://circleci.com/gh/kawakawaryuryu/dockerfile-wizard.svg?style=svg)](https://circleci.com/gh/kawakawaryuryu/dockerfile-wizard)
+[![CircleCI](https://circleci.com/gh/kawakawaryuryu/money-tracker.svg?style=svg)](https://circleci.com/gh/kawakawaryuryu/money-tracker)
 ## setup
 ```
 yarn install
